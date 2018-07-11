@@ -84,12 +84,14 @@
       <LastGenOutput>CodifyTests.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="runTests.bat" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screenshots\" />
     <Folder Include="Unit\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="DriverServers\chromedriver.exe" />
     <Content Include="DriverServers\geckodriver.exe" />
     <Content Include="DriverServers\IEDriverServer.exe" />
