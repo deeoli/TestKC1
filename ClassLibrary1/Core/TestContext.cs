@@ -6,6 +6,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace ClassLibrary1.Core
     {
 
         public static IWebDriver driver;
-        private static string browser = "Chrome"; //TODO - move to a config file
-        private static int timeout = 60; //TODO - move to config file
+        private static string browser = ConfigurationSettings.AppSettings["browser"];
+        private static int timeout = Convert.ToInt32(ConfigurationSettings.AppSettings["browserTimeOut"]); 
         private static readonly object LockOb = new object();
         private static string exeDir = Assembly.GetExecutingAssembly().Location;
         private static string DriverServerFolder = GetDriverServersDirectory();

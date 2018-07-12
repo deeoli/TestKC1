@@ -1,0 +1,147 @@
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.AnEmptyYourFeedsAreaIsShowForNewUsers
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: An empty your feeds area is show for new users
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (2.1s)
+When the user signs up with the following details:
+  --- table step argument ---
+  | username | email           | password     |
+  | DeTest01 | detest01@aa.com | LoveToTest01 |
+-> done: CodifyTest.WhenTheUserSignsUpWithTheFollowingDetails(<table>) (1.7s)
+Then the Your Feeds section should be displayed by default
+-> done: CodifyTest.ThenTheYourFeedsSectionShouldBeDisplayedByDefault() (1.6s)
+And the Your Feeds section should be empty
+-> done: CodifyTest.ThenTheYourFeedsSectionShouldBeEmpty() (0.2s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.ArticleInformationIsDisplayedInTheArticleSectionOfTheUseThatCreatedIt
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: Article information is displayed in the article section of the use that created it
+Given a user is logged in as:
+  --- table step argument ---
+  | username | email           | password     |
+  | DeTest01 | detest01@aa.com | LoveToTest01 |
+-> done: CodifyTest.GivenAUserIsLoggedInAs(<table>) (3.2s)
+When the user creates a new article
+-> done: CodifyTest.WhenTheUserCreatesANewArticle() (4.2s)
+Then the Article section is displayed with the article information
+-> done: CodifyTest.ThenTheArticleSectionIsDisplayedWithTheArticleInformation() (1.6s)
+And the Comment section is displayed
+-> done: CodifyTest.ThenTheCommentSectionIsDisplayed() (0.0s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.HomePageShowsGlobalFeeds
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: Home page shows global feeds
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.3s)
+When the home page is shown
+-> done: CodifyTest.WhenTheHomePageIsShown() (3.1s)
+Then the global feeds and popular tags are displayed
+-> done: CodifyTest.ThenTheGlobalFeedsAndPopularTagsAreDisplayed() (0.2s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.Non_MemberIsDirectedToSign_UpAreaIfTheyWantToViewAnArticle
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: Non-member is directed to sign-up area if they want to view an article
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.7s)
+When a user tries to like an article
+-> done: CodifyTest.WhenAUserTriesToLikeAnArticle() (0.2s)
+Then the user is directed to the Sign up area
+-> done: CodifyTest.ThenTheUserIsDirectedToTheSignUpArea() (0.0s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.PasswordMostHaveTheCorrectLength
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: Password most have the correct length
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.3s)
+When the user tries to sign up with a password that is too short:
+  --- table step argument ---
+  | username  | email            | password |
+  | DeTest011 | detest011@aa.com | Test     |
+-> done: CodifyTest.WhenTheUserTriesToSignUpWithAPasswordThatIsTooShort(<table>) (2.1s)
+Then a validation error is displayed with message "password is too short (minimum is 8 characters)"
+-> done: CodifyTest.ThenAValidationErrorIsDisplayedWithMessage("password is too s...") (0.6s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserCanLogIn
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: User can log in
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.8s)
+When the user signs in using:
+  --- table step argument ---
+  | username | email           | password     |
+  | DeTest01 | detest01@aa.com | LoveToTest01 |
+-> done: CodifyTest.WhenTheUserSignsInUsing(<table>) (1.1s)
+Then the user is logged in
+-> done: CodifyTest.ThenTheUserIsLoggedIn() (1.1s)
+And the users name is displayed
+-> done: CodifyTest.ThenTheUsersNameIsDisplayed() (0.1s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserCanSignUpIfNotAMember
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: User can sign up if not a member
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.7s)
+When the user signs up with the following details:
+  --- table step argument ---
+  | username | email           | password     |
+  | DeTest01 | detest01@aa.com | LoveToTest01 |
+-> done: CodifyTest.WhenTheUserSignsUpWithTheFollowingDetails(<table>) (1.5s)
+Then the user is automatically logged in
+-> done: CodifyTest.ThenTheUserIsAutomaticallyLoggedIn() (1.2s)
+And the users name is displayed
+-> done: CodifyTest.ThenTheUsersNameIsDisplayed() (0.0s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserEmailBeUnique
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: User email be unique
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.5s)
+When the user tries to sign up with an email address that already exists:
+  --- table step argument ---
+  | username   | email           | password     |
+  | DeTest0111 | detest01@aa.com | LoveToTest01 |
+-> done: CodifyTest.WhenTheUserTriesToSignUpWithAnEmailAddressThatAlreadyExists(<table>) (1.5s)
+Then a validation error is displayed with message "email has already been taken"
+-> done: CodifyTest.ThenAValidationErrorIsDisplayedWithMessage("email has already...") (0.6s)
+=> ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserNameMostBeUnique
+
+
+Feature: CodifyTests - Test Framework Example
+
+
+Scenario: User name most be unique
+Given a user is not logged in
+-> done: CodifyTest.GivenAUserIsNotLoggedIn() (1.8s)
+When the user tries to sign up with a username that already exists:
+  --- table step argument ---
+  | username | email              | password     |
+  | DeTest01 | detest00101@aa.com | LoveToTest01 |
+-> done: CodifyTest.WhenTheUserTriesToSignUpWithAUsernameThatAlreadyExists(<table>) (1.9s)
+Then a validation error is displayed with message "username has already been taken"
+-> done: CodifyTest.ThenAValidationErrorIsDisplayedWithMessage("username has alre...") (0.7s)
+-> Using app.config

@@ -3,6 +3,7 @@ using CodifyTestFWork;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,12 @@ namespace ClassLibrary1.Steps
         string _username = string.Empty;
         string _email = string.Empty;
         string _password = string.Empty;
+        string _url = ConfigurationSettings.AppSettings["url"];
 
         [Given(@"a user is not logged in")]
         public void GivenAUserIsNotLoggedIn()
         {
-            GetPage<HomePage>().Goto("http://localhost:4000/#!/");
+            GetPage<HomePage>().Goto(_url);
             //GetPage<PageBase>().WaitForAngular();
             Assert.True(GetPage<HomePage>().lnk_SignIn.Displayed);
         }

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\mr\source\repos\Test0507\ClassLibrary1\bin\Debug\ClassLibrary1.dll" total="9" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-07-11" time="13:42:37">
+  <environment nunit-version="3.5.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.3.9600.0" platform="Win32NT" cwd="C:\Users\mr\source\repos\Test0507\ClassLibrary1" machine-name="OLLIE" user="mr" user-domain="OLLIE" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\mr\source\repos\Test0507\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Success" success="True" time="129.783" asserts="24">
+    <properties>
+      <property name="_PID" value="7176" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <results>
+      <test-suite type="TestSuite" name="ClassLibrary1" executed="True" result="Success" success="True" time="129.714" asserts="24">
+        <results>
+          <test-suite type="TestFixture" name="CodifyTests_TestFrameworkExampleFeature" description="CodifyTests - Test Framework Example" executed="True" result="Success" success="True" time="129.698" asserts="24">
+            <properties>
+              <property name="Description" value="CodifyTests - Test Framework Example" />
+            </properties>
+            <results>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.AnEmptyYourFeedsAreaIsShowForNewUsers" description="An empty your feeds area is show for new users" executed="True" result="Success" success="True" time="15.958" asserts="2">
+                <properties>
+                  <property name="Description" value="An empty your feeds area is show for new users" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.ArticleInformationIsDisplayedInTheArticleSectionOfTheUseThatCreatedIt" description="Article information is displayed in the article section of the use that created it" executed="True" result="Success" success="True" time="18.615" asserts="3">
+                <properties>
+                  <property name="Description" value="Article information is displayed in the article section of the use that created it" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.HomePageShowsGlobalFeeds" description="Home page shows global feeds" executed="True" result="Success" success="True" time="14.180" asserts="5">
+                <properties>
+                  <property name="Description" value="Home page shows global feeds" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.Non_MemberIsDirectedToSign_UpAreaIfTheyWantToViewAnArticle" description="Non-member is directed to sign-up area if they want to view an article" executed="True" result="Success" success="True" time="11.239" asserts="2">
+                <properties>
+                  <property name="Description" value="Non-member is directed to sign-up area if they want to view an article" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.PasswordMostHaveTheCorrectLength" description="Password most have the correct length" executed="True" result="Success" success="True" time="13.386" asserts="2">
+                <properties>
+                  <property name="Description" value="Password most have the correct length" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserCanLogIn" description="User can log in" executed="True" result="Success" success="True" time="13.532" asserts="3">
+                <properties>
+                  <property name="Description" value="User can log in" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserCanSignUpIfNotAMember" description="User can sign up if not a member" executed="True" result="Success" success="True" time="13.700" asserts="3">
+                <properties>
+                  <property name="Description" value="User can sign up if not a member" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserEmailBeUnique" description="User email be unique" executed="True" result="Success" success="True" time="13.100" asserts="2">
+                <properties>
+                  <property name="Description" value="User email be unique" />
+                </properties>
+              </test-case>
+              <test-case name="ClassLibrary1.CodifyTests_TestFrameworkExampleFeature.UserNameMostBeUnique" description="User name most be unique" executed="True" result="Success" success="True" time="15.448" asserts="2">
+                <properties>
+                  <property name="Description" value="User name most be unique" />
+                </properties>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
