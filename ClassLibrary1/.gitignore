@@ -1,5 +1,7 @@
-/*/Screenshot
-/Screenshot
+.vs/*
+.vs
+Screenshots
+/Screenshots/*
 /packages
 */bin
 /bin

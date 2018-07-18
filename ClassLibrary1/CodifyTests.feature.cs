@@ -82,7 +82,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest01@aa.com",
                         "LoveToTest01"});
 #line 6
- testRunner.When("the user signs up with the following details:", ((string)(null)), table1, "When ");
+ testRunner.When("the user signs up with the following details", ((string)(null)), table1, "When ");
 #line 9
  testRunner.Then("the user is automatically logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
@@ -110,7 +110,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest01@aa.com",
                         "LoveToTest01"});
 #line 14
- testRunner.When("the user signs in using:", ((string)(null)), table2, "When ");
+ testRunner.When("the user signs in using", ((string)(null)), table2, "When ");
 #line 17
  testRunner.Then("the user is logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 18
@@ -154,10 +154,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User name most be unique")]
-        public virtual void UserNameMostBeUnique()
+        [NUnit.Framework.DescriptionAttribute("User name must be unique")]
+        public virtual void UserNameMustBeUnique()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User name most be unique", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User name must be unique", ((string[])(null)));
 #line 30
 this.ScenarioSetup(scenarioInfo);
 #line 31
@@ -172,7 +172,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest00101@aa.com",
                         "LoveToTest01"});
 #line 32
- testRunner.When("the user tries to sign up with a username that already exists:", ((string)(null)), table3, "When ");
+ testRunner.When("the user tries to sign up with a username that already exists", ((string)(null)), table3, "When ");
 #line 35
  testRunner.Then("a validation error is displayed with message \"username has already been taken\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -180,10 +180,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User email be unique")]
-        public virtual void UserEmailBeUnique()
+        [NUnit.Framework.DescriptionAttribute("User email must be unique")]
+        public virtual void UserEmailMustBeUnique()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User email be unique", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User email must be unique", ((string[])(null)));
 #line 37
 this.ScenarioSetup(scenarioInfo);
 #line 38
@@ -198,7 +198,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest01@aa.com",
                         "LoveToTest01"});
 #line 39
- testRunner.When("the user tries to sign up with an email address that already exists:", ((string)(null)), table4, "When ");
+ testRunner.When("the user tries to sign up with an email address that already exists", ((string)(null)), table4, "When ");
 #line 42
  testRunner.Then("a validation error is displayed with message \"email has already been taken\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -224,7 +224,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest011@aa.com",
                         "Test"});
 #line 46
- testRunner.When("the user tries to sign up with a password that is too short:", ((string)(null)), table5, "When ");
+ testRunner.When("the user tries to sign up with a password that is too short", ((string)(null)), table5, "When ");
 #line 49
  testRunner.Then("a validation error is displayed with message \"password is too short (minimum is 8" +
                     " characters)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -251,7 +251,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest01@aa.com",
                         "LoveToTest01"});
 #line 53
- testRunner.When("the user signs up with the following details:", ((string)(null)), table6, "When ");
+ testRunner.When("the user signs up with the following details", ((string)(null)), table6, "When ");
 #line 56
  testRunner.Then("the Your Feeds section should be displayed by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 57
@@ -279,7 +279,7 @@ this.ScenarioSetup(scenarioInfo);
                         "detest01@aa.com",
                         "LoveToTest01"});
 #line 60
- testRunner.Given("a user is logged in as:", ((string)(null)), table7, "Given ");
+ testRunner.Given("a user is logged in as", ((string)(null)), table7, "Given ");
 #line 63
  testRunner.When("the user creates a new article", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 64

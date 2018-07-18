@@ -11,6 +11,8 @@ using TechTalk.SpecFlow;
 
 namespace ClassLibrary1.Steps
 {
+    /* TODO: create Table extraction and data randomization methods/classes, put in a helper folder 
+     */
     [Binding]
     public sealed class CodifyTest : Core.TestContext
     {
@@ -43,7 +45,7 @@ namespace ClassLibrary1.Steps
 
         }
 
-        [When(@"the user signs up with the following details:")]
+        [When(@"the user signs up with the following details")]
         public void WhenTheUserSignsUpWithTheFollowingDetails(Table table)
         {
    
@@ -69,7 +71,7 @@ namespace ClassLibrary1.Steps
                 .SignUp(_username,_password, _email);
         }
 
-        [When(@"the user signs in using:")]
+        [When(@"the user signs in using")]
         public void WhenTheUserSignsInUsing(Table table)
         {
             foreach (TableRow row in table.Rows)
@@ -83,6 +85,8 @@ namespace ClassLibrary1.Steps
             GetPage<PageBase>().WaitForAngular();
             GetPage<SignInPage>()
                 .SignIn(_password, _email);
+
+            //Add assert here
            
         }
 
@@ -134,7 +138,7 @@ namespace ClassLibrary1.Steps
             Assert.True(GetPage<RegisterPage>().lbl_pageLabel.Displayed, "");
         }
 
-        [When(@"the user tries to sign up with a username that already exists:")]
+        [When(@"the user tries to sign up with a username that already exists")]
         public void WhenTheUserTriesToSignUpWithAUsernameThatAlreadyExists(Table table)
         {
             foreach (TableRow row in table.Rows)
@@ -170,7 +174,7 @@ namespace ClassLibrary1.Steps
         }
 
 
-        [When(@"the user tries to sign up with an email address that already exists:")]
+        [When(@"the user tries to sign up with an email address that already exists")]
         public void WhenTheUserTriesToSignUpWithAnEmailAddressThatAlreadyExists(Table table)
         {
             foreach (TableRow row in table.Rows)
@@ -186,7 +190,7 @@ namespace ClassLibrary1.Steps
                 .SignUp(_username, _password, _email);
         }
 
-        [When(@"the user tries to sign up with a password that is too short:")]
+        [When(@"the user tries to sign up with a password that is too short")]
         public void WhenTheUserTriesToSignUpWithAPasswordThatIsTooShort(Table table)
         {
             foreach (TableRow row in table.Rows)
@@ -219,7 +223,7 @@ namespace ClassLibrary1.Steps
 
         }
 
-        [Given(@"a user is logged in as:")]
+        [Given(@"a user is logged in as")]
         public void GivenAUserIsLoggedInAs(Table table)
         {
             GivenAUserIsNotLoggedIn();

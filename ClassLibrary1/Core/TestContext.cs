@@ -14,6 +14,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+using Test0507.Core;
 
 namespace ClassLibrary1.Core
 {
@@ -72,6 +74,9 @@ namespace ClassLibrary1.Core
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeout);
             driver.Manage().Window.Maximize();
+
+            DirectoryHelper.DeleteAllFiles(GetScreenShotDirectory());
+
         }
 
         [AfterScenario()]
@@ -89,12 +94,14 @@ namespace ClassLibrary1.Core
         [AfterStep()]
         public static void TakeScreenShot()
         {
-            string name = NUnit.Framework.TestContext.CurrentContext.Test.Name;
-            string nameWithSpaces = string.Concat(name.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' ');
+            string name = ScenarioContext.Current.StepContext.StepInfo.Text;
 
-            TakeScreenShot(nameWithSpaces, ScreenShotFolder);
+            //
+            name = name.Replace(' ', '_');
+
+            TakeScreenShot(name, ScreenShotFolder);
             name = null;
-            nameWithSpaces = null;
+            name = null;
         }
 
 

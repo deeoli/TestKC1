@@ -68,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CodifyTests.feature</DependentUpon>
     </Compile>
+    <Compile Include="Core\DirectoryHelper.cs" />
     <Compile Include="Core\PageBase.cs" />
     <Compile Include="Core\TestContext.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
